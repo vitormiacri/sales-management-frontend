@@ -1,19 +1,16 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Container = styled.button`
-  background: #ff9000;
+  background: linear-gradient(270deg, #ff96f5 0%, #ff92ba 100%);
   height: 56px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 0;
   width: 100%;
   padding: 0 16px;
-  color: #312e38;
-  font-weight: 500;
-  margin-top: 16px;
-  transition: background-color 0.4s;
-
-  &:hover {
-    background: ${shade(0.2, '#ff9000')};
-  }
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  letter-spacing: 0.1em;
+  font-size: 1.8rem;
 `;
