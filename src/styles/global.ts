@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
     * {
     margin: 0;
     padding: 0;
@@ -11,8 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(180deg, #FF92B9 0%, #FFC0F9 100%);
-    color: #FFF;
+    background: #FFF;
+    color: #000;
     -webkit-font-smoothing: antialiased;
   }
 
