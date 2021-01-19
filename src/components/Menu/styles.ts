@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: calc(100% - 75%);
   max-width: 350px;
 
-  border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   display: flex;
   flex-direction: column;
