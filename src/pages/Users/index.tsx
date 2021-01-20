@@ -2,9 +2,7 @@ import React, { useCallback } from 'react';
 import { MdAddCircleOutline } from 'react-icons/md';
 import { useHistory } from 'react-router-dom';
 import Menu from '../../components/Menu';
-import { Container, Content } from '../../styles/global';
-
-import { Header, AddButton } from './styles';
+import { Container, Content, Header, AddButton } from '../../styles/global';
 
 const Users: React.FC = () => {
   const history = useHistory();

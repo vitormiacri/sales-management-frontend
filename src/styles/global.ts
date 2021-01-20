@@ -48,7 +48,7 @@ export const ContainerFormButtons = styled.div`
 `;
 
 export const SaveButton = styled(Button)`
-  max-width: 160px;
+  max-width: 170px;
   font-size: 1.5vw;
   text-transform: none;
   letter-spacing: 0;
@@ -68,7 +68,7 @@ export const CancelButton = styled.button`
   align-items: center;
   justify-content: center;
   background: transparent;
-  max-width: 170px;
+  max-width: 190px;
   border-radius: 8px;
   border: solid 1px #7a7a7a;
   width: 100%;
@@ -81,5 +81,52 @@ export const CancelButton = styled.button`
 
   svg {
     margin-right: 0.5rem;
+  }
+`;
+
+export const Header = styled.div`
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  h1 {
+    color: #7a7a7a;
+    font-weight: 700;
+    font-size: 2.3vw;
+  }
+`;
+
+export const AddButton = styled(Button)`
+  max-width: 200px;
+  font-size: 1.5vw;
+  text-transform: none;
+  letter-spacing: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+`;
+
+export const FormRow = styled.div`
+  width: 100%;
+  display: flex;
+
+  & > :last-child {
+    margin-left: 8px;
+  }
+
+  & > div {
+    margin-top: 0 !important;
+  }
+
+  & + div {
+    margin-top: 8px;
   }
 `;

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { MdEmail, MdLock, MdPerson, MdDone } from 'react-icons/md';
+import { MdEmail, MdLock, MdPerson } from 'react-icons/md';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -7,10 +7,9 @@ import { useHistory, useParams } from 'react-router-dom';
 
 import Menu from '../../../components/Menu';
 import InputField from '../../../components/Input';
-import CancelButton from '../../../components/CancelButton';
+
 import { useToast } from '../../../hooks/Toast';
-import { Container, Content } from '../../../styles/global';
-import { Header } from '../styles';
+import { Container, Content, Header } from '../../../styles/global';
 import getValidationErrors from '../../../utils/getVaalidationErrors';
 import api from '../../../services/api';
 import FormButtons from '../../../components/FormButtons';
@@ -31,49 +30,52 @@ const UserForm: React.FC = () => {
   const history = useHistory();
   const { id } = useParams<ParamsData>();
 
-  const handleSubmit = useCallback(async (data: UserFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: UserFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        name: Yup.string().required('Nome obrigatório'),
-        email: Yup.string()
-          .email('E-mail inválido')
-          .required('E-mail obrigatório'),
-        password: Yup.string().required('Senha obrigatória'),
-      });
+        const schema = Yup.object().shape({
+          name: Yup.string().required('Nome obrigatório'),
+          email: Yup.string()
+            .email('E-mail inválido')
+            .required('E-mail obrigatório'),
+          password: Yup.string().required('Senha obrigatória'),
+        });
 
-      await schema.validate(data, { abortEarly: false });
+        await schema.validate(data, { abortEarly: false });
 
-      let msg;
-      if (id) {
-        await api.put(`/users/${id}`, data);
-        msg = 'O usuário foi atualizado com sucesso.';
-      } else {
-        await api.post('/users', data);
-        msg = 'O usuário foi criado com sucesso.';
+        let msg;
+        if (id) {
+          await api.put(`/users/${id}`, data);
+          msg = 'O usuário foi atualizado com sucesso.';
+        } else {
+          await api.post('/users', data);
+          msg = 'O usuário foi criado com sucesso.';
+        }
+
+        history.push('/users');
+        addToast({
+          type: 'success',
+          title: 'Sucesso!',
+          description: msg,
+        });
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+          formRef.current?.setErrors(errors);
+
+          return;
+        }
+        addToast({
+          type: 'error',
+          title: 'Erro ao salvar',
+          description: 'Ocorreu um erro, tente novamente',
+        });
       }
-
-      history.push('/users');
-      addToast({
-        type: 'success',
-        title: 'Sucesso!',
-        description: msg,
-      });
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationErrors(err);
-        formRef.current?.setErrors(errors);
-
-        return;
-      }
-      addToast({
-        type: 'error',
-        title: 'Erro ao salvar',
-        description: 'Ocorreu um erro, tente novamente',
-      });
-    }
-  }, []);
+    },
+    [addToast, history, id],
+  );
 
   return (
     <Container>
