@@ -96,6 +96,18 @@ export const Header = styled.div`
     font-weight: 700;
     font-size: 2.3vw;
   }
+
+  & > div {
+    display: flex;
+
+    & > input {
+      width: 300px;
+      border: none;
+      border-bottom: 1px solid #7a7a7a;
+      padding: 0 1rem;
+      margin-right: 1rem;
+    }
+  }
 `;
 
 export const AddButton = styled(Button)`
@@ -129,4 +141,12 @@ export const FormRow = styled.div`
   & + div {
     margin-top: 8px;
   }
+`;
+
+export const Empty = styled.div`
+  width: 100%;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: center;
+  padding: 5rem 0;
 `;
