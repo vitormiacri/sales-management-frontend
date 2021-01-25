@@ -1773,6 +1773,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-loader-spinner@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@types/react-loader-spinner/-/react-loader-spinner-3.1.3.tgz#eb08b0894dae61773df5873e22060c653253e3dc"
+  integrity sha512-sSkLiV2Nas6IZ77sCU6mJXycnTLnnSukE/y8FY5/uTPI90YORYGJOvdfblm3xatT9WSTgvhTEdQAPx3gRF6d3g==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@*":
   version "0.63.19"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.19.tgz#5302f3fecd47ea83626b0bafacbb0d9f2892a242"
@@ -9653,6 +9660,14 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-loader-spinner@^3.1.14:
+  version "3.1.14"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-3.1.14.tgz#2a201f07379c492766175609903c0f2ced57c720"
+  integrity sha512-7V+upnW+RVA/O94LIB/EQLK2uaz/TpZBHG5uNXlOXgvxvALxlxVYeEDmus5Oex2C58fiwrsRvSyu/4VRmLbZ9Q==
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.7.2"
 
 react-router-dom@^5.2.0:
   version "5.2.0"

@@ -33,6 +33,7 @@
     "cypress"
   ],
   "rules": {
+    "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
