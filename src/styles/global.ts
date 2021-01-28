@@ -121,25 +121,28 @@ export const AddButton = styled(Button)`
   justify-content: center;
   margin-top: 0;
 
-  svg {
-    margin-right: 0.5rem;
+  span {
+    margin-left: 0.5rem;
   }
 `;
 
 export const FormRow = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 8px;
 
-  & > :last-child {
-    margin-left: 8px;
+  & > :first-child {
+    margin-left: 0;
   }
 
   & > div {
     margin-top: 0 !important;
+    margin-left: 8px;
   }
 
-  & + div {
-    margin-top: 8px;
+  button {
+    height: 65px;
+    margin-left: 8px;
   }
 `;
 
