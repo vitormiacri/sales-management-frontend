@@ -33,6 +33,7 @@
     "cypress"
   ],
   "rules": {
+    "no-nested-ternary": "off",
     "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "error",
