@@ -5,11 +5,12 @@ import { Container, ContainerLoading } from './styles';
 
 interface CardProps {
   loading?: boolean;
+  marginTop?: string;
 }
 
-const Card: React.FC<CardProps> = ({ loading, children }) => {
+const Card: React.FC<CardProps> = ({ loading, marginTop, children }) => {
   return (
-    <Container>
+    <Container marginTop={marginTop}>
       {loading ? (
         <ContainerLoading>
           <Loader

@@ -33,9 +33,9 @@ const Menu: React.FC = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName="active" to="/sales" title="Vendas">
+            <NavLink activeClassName="active" to="/orders" title="Pedidos">
               <MdLocalAtm />
-              <span>Vendas</span>
+              <span>Pedidos</span>
             </NavLink>
           </li>
           <li>

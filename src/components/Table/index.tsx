@@ -1,13 +1,14 @@
 import React from 'react';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
-import { Container } from './styles';
+import { Container, Footer } from './styles';
 
 interface TableProps {
   header: string[];
   page: number;
   perPage: number;
   totalRows: number;
+  noFooter?: boolean;
   handlePagination(type: string): void;
   children: React.ReactNode;
 }
@@ -17,15 +18,16 @@ const Table: React.FC<TableProps> = ({
   page,
   perPage,
   totalRows,
+  noFooter,
   handlePagination,
   children,
 }) => {
   const hasNextPage = perPage * page >= totalRows;
   return (
-    <Container>
+    <Container noFooter={noFooter}>
       <thead>
         <tr>
-          <th>#</th>
+          <th hidden={noFooter}>#</th>
           {header.map((item, index) => (
             <th key={index}>{item}</th>
           ))}
@@ -33,7 +35,7 @@ const Table: React.FC<TableProps> = ({
         </tr>
       </thead>
       <tbody>{children}</tbody>
-      <footer>
+      <Footer noFooter={noFooter}>
         <button
           type="button"
           disabled={page < 2}
@@ -51,7 +53,7 @@ const Table: React.FC<TableProps> = ({
           Próxima
           <MdKeyboardArrowRight size={26} />
         </button>
-      </footer>
+      </Footer>
     </Container>
   );
 };
