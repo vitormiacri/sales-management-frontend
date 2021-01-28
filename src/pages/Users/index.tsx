@@ -137,7 +137,7 @@ const Users: React.FC = () => {
             />
             <AddButton type="button" onClick={clickAdd}>
               <MdAddCircleOutline size={26} />
-              Adicionar
+              <span>Adicionar</span>
             </AddButton>
           </div>
         </Header>

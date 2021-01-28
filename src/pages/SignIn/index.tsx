@@ -11,7 +11,7 @@ import InputField from '../../components/Input';
 import LogoSignIn from '../../assets/logo-signin.png';
 import Button from '../../components/Button';
 import { useAuth } from '../../hooks/Auth';
-import getValidationErrors from '../../utils/getVaalidationErrors';
+import getValidationErrors from '../../utils/getValidationErrors';
 import { useToast } from '../../hooks/Toast';
 
 interface SignInFormData {
