@@ -64,9 +64,9 @@ export const Container = styled.table<FooterProps>`
   }
 `;
 
-export const Footer = styled.footer<FooterProps>`
+export const Footer = styled.div<FooterProps>`
   width: 100%;
-  display: ${props => (props.noFooter ? 'none' : 'flex')};
+  display: ${({ noFooter }) => (noFooter ? 'none' : 'flex')};
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1.5rem;

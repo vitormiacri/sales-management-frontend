@@ -9,6 +9,7 @@ interface TableProps {
   perPage: number;
   totalRows: number;
   noFooter?: boolean;
+  noActions?: boolean;
   handlePagination(type: string): void;
   children: React.ReactNode;
 }
@@ -19,6 +20,7 @@ const Table: React.FC<TableProps> = ({
   perPage,
   totalRows,
   noFooter,
+  noActions,
   handlePagination,
   children,
 }) => {
@@ -31,7 +33,7 @@ const Table: React.FC<TableProps> = ({
           {header.map((item, index) => (
             <th key={index}>{item}</th>
           ))}
-          <th>Ações</th>
+          <th hidden={noActions}>Ações</th>
         </tr>
       </thead>
       <tbody>{children}</tbody>

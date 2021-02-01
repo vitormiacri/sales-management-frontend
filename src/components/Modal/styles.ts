@@ -23,7 +23,7 @@ export const ModalBody = styled.div`
   z-index: 5;
   background: #fff;
   padding: 2em 2em 1em;
-  min-width: 20%;
+  width: 50%;
   border-radius: 4px;
   text-align: center;
   font-size: 1.2em;

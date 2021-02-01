@@ -130,6 +130,7 @@ export const FormRow = styled.div`
   width: 100%;
   display: flex;
   margin-top: 8px;
+  align-items: center;
 
   & > :first-child {
     margin-left: 0;

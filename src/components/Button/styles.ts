@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  background: linear-gradient(270deg, #ff96f5 0%, #ff92ba 100%);
+  background: ${({ theme }) =>
+    `linear-gradient(270deg, #ff96f5 0%, ${theme.primaryColor} 100%);`};
   height: 56px;
   border-radius: 8px;
   border: 0;
