@@ -30,7 +30,7 @@ const ClientForm: React.FC = () => {
   const { id } = useParams<ParamsData>();
 
   useEffect(() => {
-    async function loadProduct(): Promise<void> {
+    async function loadClient(): Promise<void> {
       const response = await api.get(`/clients`, {
         params: {
           id,
@@ -40,7 +40,7 @@ const ClientForm: React.FC = () => {
       formRef.current?.setData(client);
     }
     if (id) {
-      loadProduct();
+      loadClient();
     }
   }, [id]);
 
@@ -58,10 +58,10 @@ const ClientForm: React.FC = () => {
 
         let msg;
         if (id) {
-          await api.put(`/products/${id}`, data);
+          await api.put(`/clients/${id}`, data);
           msg = 'O cliente foi atualizado com sucesso.';
         } else {
-          await api.post('/products', data);
+          await api.post('/clients', data);
           msg = 'O cliente foi criado com sucesso.';
         }
 
