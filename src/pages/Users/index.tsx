@@ -127,7 +127,7 @@ const Users: React.FC = () => {
       <Menu />
       <Content>
         <Header>
-          <h1>Produtos</h1>
+          <h1>Usuários</h1>
           <div>
             <input
               type="text"
