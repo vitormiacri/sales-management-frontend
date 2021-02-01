@@ -1,11 +1,15 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import { AuthProvider } from './Auth';
 import { ToastProvider } from './Toast';
+import theme from '../styles/theme';
 
 const AppProvider: React.FC = ({ children }) => (
   <AuthProvider>
-    <ToastProvider>{children}</ToastProvider>
+    <ThemeProvider theme={theme}>
+      <ToastProvider>{children}</ToastProvider>
+    </ThemeProvider>
   </AuthProvider>
 );
 
