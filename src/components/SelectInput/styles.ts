@@ -11,7 +11,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
 
-  margin: 0.5em 0;
+  /* margin-top: 8px; */
 `;
 
 export const Error = styled.p`

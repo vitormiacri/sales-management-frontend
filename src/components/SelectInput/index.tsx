@@ -47,7 +47,7 @@ const Select: React.FC<Props> = ({ name, label, ...rest }) => {
         '&:hover': {
           borderColor: '#ff92b9',
         },
-        padding: 8,
+        padding: 10,
         fontSize: '1.5rem',
         fontWeight: 500,
       };
