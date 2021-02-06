@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   .logo {
     margin-top: 2rem;
-    width: 55%;
+    width: 50%;
   }
 `;
 
@@ -35,7 +35,7 @@ export const MenuList = styled.div`
     padding-left: 3rem;
 
     li {
-      font-size: 1.5vw;
+      font-size: 1.1vw;
       font-weight: 600;
       align-self: flex-start;
       width: 100%;
@@ -80,7 +80,7 @@ export const MenuList = styled.div`
   button {
     width: 100%;
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     font-weight: 600;
     border: none;
     background: none;
@@ -115,7 +115,7 @@ export const MenuList = styled.div`
 
 export const UserInfo = styled.p`
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 600;
   margin-top: 1.5rem;
 `;
