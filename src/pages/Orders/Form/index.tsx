@@ -57,10 +57,6 @@ interface ClientsData {
   address: string;
 }
 
-interface ParamsData {
-  id: string;
-}
-
 export interface SelectOptions {
   value: number | string;
   label: string;
@@ -177,7 +173,6 @@ const OrderForm: React.FC = () => {
 
           return;
         }
-        console.log(err);
         addToast({
           type: 'error',
           title: 'Erro ao salvar',
