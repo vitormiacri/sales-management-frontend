@@ -12,13 +12,14 @@ export const Card = styled.div`
   width: 22%;
   padding: 0;
   border-radius: 20px;
-  border: 1px solid #dadada;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1.5rem 0;
+  border: 1px solid #dadada;
+  border-left: 5px solid ${({ theme }) => theme.primaryColor};
 `;
 
 export const Value = styled.p`
@@ -31,7 +32,7 @@ export const Value = styled.p`
 `;
 
 export const Description = styled.p`
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: #5c5454;
   letter-spacing: 0.5px;
   font-weight: 700;

@@ -10,7 +10,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #FFF;
+    background: ${({ theme }) => theme.backgroundColor};
     color: #000;
     -webkit-font-smoothing: antialiased;
   }
@@ -106,6 +106,7 @@ export const Header = styled.div`
       border-bottom: 1px solid #7a7a7a;
       padding: 0 1rem;
       margin-right: 1rem;
+      background: ${({ theme }) => theme.backgroundColor};
     }
   }
 `;

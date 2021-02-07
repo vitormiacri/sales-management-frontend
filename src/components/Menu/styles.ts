@@ -60,7 +60,7 @@ export const MenuList = styled.div`
 
         &.active,
         &:hover {
-          background-color: #fff;
+          background-color: ${({ theme }) => theme.backgroundColor};
           width: 100%;
           color: #ff92ba;
           border-top-left-radius: 20px;
@@ -97,7 +97,7 @@ export const MenuList = styled.div`
       }
     }
     &:hover {
-      background-color: #fff;
+      background-color: ${({ theme }) => theme.backgroundColor};
       width: 100%;
       color: #ff92ba;
       border-top-left-radius: 20px;
