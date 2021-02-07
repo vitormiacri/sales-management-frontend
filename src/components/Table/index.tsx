@@ -27,16 +27,18 @@ const Table: React.FC<TableProps> = ({
   const hasNextPage = perPage * page >= totalRows;
   return (
     <Container noFooter={noFooter}>
-      <thead>
-        <tr>
-          <th hidden={noFooter}>#</th>
-          {header.map((item, index) => (
-            <th key={index}>{item}</th>
-          ))}
-          <th hidden={noActions}>Ações</th>
-        </tr>
-      </thead>
-      <tbody>{children}</tbody>
+      <table>
+        <thead>
+          <tr>
+            <th hidden={noFooter}>#</th>
+            {header.map((item, index) => (
+              <th key={index}>{item}</th>
+            ))}
+            <th hidden={noActions}>Ações</th>
+          </tr>
+        </thead>
+        <tbody>{children}</tbody>
+      </table>
       <Footer noFooter={noFooter}>
         <button
           type="button"

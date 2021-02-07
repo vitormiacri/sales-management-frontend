@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 interface FooterProps {
-  noFooter: boolean | undefined;
+  noFooter?: boolean;
 }
 
-export const Container = styled.table<FooterProps>`
-  width: 100%;
+export const Container = styled.div<FooterProps>`
+  table {
+    width: 100%;
+  }
 
   tr {
     width: 100%;
