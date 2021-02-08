@@ -37,3 +37,33 @@ export const Description = styled.p`
   letter-spacing: 0.5px;
   font-weight: 700;
 `;
+
+export const OrderHistory = styled.div`
+  width: 50%;
+  margin-top: 1.5rem;
+  padding-right: 1.5rem;
+`;
+
+export const Title = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.3vw;
+  color: #5c5454;
+  font-weight: 700;
+`;
+
+export const Graphics = styled.div`
+  width: 50%;
+  height: 320px;
+`;
+
+export const ContentDashboard = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+`;
