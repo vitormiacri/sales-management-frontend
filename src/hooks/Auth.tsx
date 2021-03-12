@@ -25,8 +25,8 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [authData, setAuthData] = useState<AuthState>(() => {
-    const token = localStorage.getItem('@salesManager:token');
-    const user = localStorage.getItem('@salesManager:user');
+    const token = sessionStorage.getItem('@salesManager:token');
+    const user = sessionStorage.getItem('@salesManager:user');
 
     if (token && user) {
       api.defaults.headers.authorization = `Bearer ${token}`;
@@ -44,8 +44,8 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     const { token, user } = response.data;
 
-    localStorage.setItem('@salesManager:token', token);
-    localStorage.setItem('@salesManager:user', JSON.stringify(user));
+    sessionStorage.setItem('@salesManager:token', token);
+    sessionStorage.setItem('@salesManager:user', JSON.stringify(user));
 
     api.defaults.headers.authorization = `Bearer ${token}`;
 
@@ -53,8 +53,8 @@ export const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem('@salesManager:token');
-    localStorage.removeItem('@salesManager:user');
+    sessionStorage.removeItem('@salesManager:token');
+    sessionStorage.removeItem('@salesManager:user');
 
     setAuthData({} as AuthState);
   }, []);
