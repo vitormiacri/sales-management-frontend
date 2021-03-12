@@ -35,8 +35,12 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: 0 2rem;
+  height: 100%;
+  margin-left: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
   width: 100%;
+  overflow-y: auto;
 `;
 
 export const ContainerFormButtons = styled.div`
