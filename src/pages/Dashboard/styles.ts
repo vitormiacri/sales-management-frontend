@@ -41,7 +41,6 @@ export const Description = styled.p`
 export const OrderHistory = styled.div`
   width: 50%;
   margin-top: 1.5rem;
-  padding-right: 1.5rem;
 `;
 
 export const Title = styled.div`
@@ -57,7 +56,7 @@ export const Title = styled.div`
 
 export const Graphics = styled.div`
   width: 50%;
-  height: 320px;
+  height: 310px;
 `;
 
 export const ContentDashboard = styled.div`
